@@ -5,7 +5,6 @@ import java.util.*;
 import com.intellij.execution.ui.ConsoleViewContentType;
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.ui.JBColor;
-import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -71,7 +70,7 @@ public class MyBatisLogConsoleFilter implements Filter {
         final String parameters = manager.getParameters();
         final List<String> keywords = manager.getKeywords();
 
-        if (CollectionUtils.isNotEmpty(keywords)) {
+        if (keywords != null && !keywords.isEmpty()) {
             for (String keyword : keywords) {
                 if (line.contains(keyword)) {
                     sql = null;
