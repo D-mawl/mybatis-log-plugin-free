@@ -1,4 +1,4 @@
-package com.starxg.mybatislog.action;
+package com.mawl.mybatislog.action;
 
 import com.intellij.ide.plugins.IdeaPluginDescriptor;
 import com.intellij.ide.plugins.PluginManager;
@@ -6,8 +6,8 @@ import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.extensions.PluginId;
-import com.starxg.mybatislog.Icons;
-import com.starxg.mybatislog.gui.DonateDialogWrapper;
+import com.mawl.mybatislog.Icons;
+import com.mawl.mybatislog.gui.DonateDialogWrapper;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
@@ -49,7 +49,7 @@ public class DonateAction extends AnAction {
     }
 
     private String getDonateKey() {
-        final IdeaPluginDescriptor plugin = PluginManager.getPlugin(PluginId.getId("com.starxg.mybatis-log-plugin-free"));
+        final IdeaPluginDescriptor plugin = PluginManager.getPlugin(PluginId.getId("com.mawl.mybatislog"));
         if (Objects.isNull(plugin)) {
             return DonateAction.class.getName();
         }

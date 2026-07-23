@@ -1,4 +1,4 @@
-package com.starxg.mybatislog;
+package com.mawl.mybatislog;
 
 import java.util.*;
 
@@ -12,7 +12,7 @@ import org.jetbrains.annotations.Nullable;
 
 import com.intellij.execution.filters.Filter;
 import com.intellij.openapi.project.Project;
-import com.starxg.mybatislog.gui.MyBatisLogManager;
+import com.mawl.mybatislog.gui.MyBatisLogManager;
 
 /**
  * MyBatisLogConsoleFilter

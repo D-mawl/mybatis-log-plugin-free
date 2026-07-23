@@ -1,9 +1,9 @@
-package com.starxg.mybatislog.action;
+package com.mawl.mybatislog.action;
 
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
-import com.starxg.mybatislog.gui.MyBatisLogManager;
+import com.mawl.mybatislog.gui.MyBatisLogManager;
 import org.jetbrains.annotations.NotNull;
 
 /**

@@ -1,4 +1,4 @@
-package com.starxg.mybatislog;
+package com.mawl.mybatislog;
 
 import java.util.*;
 

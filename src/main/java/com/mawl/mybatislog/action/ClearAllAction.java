@@ -1,4 +1,4 @@
-package com.starxg.mybatislog.action;
+package com.mawl.mybatislog.action;
 
 import com.intellij.execution.ExecutionBundle;
 import com.intellij.execution.impl.ConsoleViewImpl;

@@ -1,4 +1,4 @@
-package com.starxg.mybatislog.action;
+package com.mawl.mybatislog.action;
 
 import java.util.Objects;
 
@@ -8,7 +8,7 @@ import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.project.DumbAwareAction;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.Disposer;
-import com.starxg.mybatislog.gui.MyBatisLogManager;
+import com.mawl.mybatislog.gui.MyBatisLogManager;
 
 /**
  * MyBatisLogAction

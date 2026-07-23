@@ -1,11 +1,11 @@
-package com.starxg.mybatislog.gui;
+package com.mawl.mybatislog.gui;
 
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.ui.HyperlinkLabel;
 import com.intellij.util.ui.JBUI;
-import com.starxg.mybatislog.Icons;
+import com.mawl.mybatislog.Icons;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 

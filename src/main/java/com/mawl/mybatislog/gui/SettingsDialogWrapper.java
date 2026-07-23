@@ -1,4 +1,4 @@
-package com.starxg.mybatislog.gui;
+package com.mawl.mybatislog.gui;
 
 import com.intellij.execution.ui.ConsoleViewContentType;
 import com.intellij.ide.util.PropertiesComponent;
@@ -21,7 +21,7 @@ import java.awt.event.WindowEvent;
 import java.util.Collections;
 import java.util.Objects;
 
-import static com.starxg.mybatislog.MyBatisLogConsoleFilter.*;
+import static com.mawl.mybatislog.MyBatisLogConsoleFilter.*;
 
 /**
  * SettingsDialogWrapper

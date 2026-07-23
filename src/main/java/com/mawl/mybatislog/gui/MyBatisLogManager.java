@@ -1,4 +1,4 @@
-package com.starxg.mybatislog.gui;
+package com.mawl.mybatislog.gui;
 
 import com.intellij.execution.DefaultExecutionResult;
 import com.intellij.execution.ExecutionManager;
@@ -37,9 +37,9 @@ import com.intellij.openapi.wm.ex.ToolWindowManagerListener;
 import com.intellij.ui.JBColor;
 import com.intellij.ui.content.Content;
 import com.intellij.util.messages.MessageBusConnection;
-import com.starxg.mybatislog.BasicFormatter;
-import com.starxg.mybatislog.Icons;
-import com.starxg.mybatislog.action.*;
+import com.mawl.mybatislog.BasicFormatter;
+import com.mawl.mybatislog.Icons;
+import com.mawl.mybatislog.action.*;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -52,7 +52,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Function;
 
-import static com.starxg.mybatislog.MyBatisLogConsoleFilter.*;
+import static com.mawl.mybatislog.MyBatisLogConsoleFilter.*;
 
 /**
  * MyBatisLogManager

@@ -1,4 +1,4 @@
-package com.starxg.mybatislog.action;
+package com.mawl.mybatislog.action;
 
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnAction;

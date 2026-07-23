@@ -1,4 +1,4 @@
-package com.starxg.mybatislog.gui;
+package com.mawl.mybatislog.gui;
 
 import javax.swing.*;
 
@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NotNull;
 
 import com.intellij.execution.Executor;
 import com.intellij.execution.ExecutorRegistry;
-import com.starxg.mybatislog.Icons;
+import com.mawl.mybatislog.Icons;
 
 /**
  * MyBatisLogExecutor
@@ -15,7 +15,7 @@ import com.starxg.mybatislog.Icons;
  */
 class MyBatisLogExecutor extends Executor {
 
-    public static final String TOOL_WINDOW_ID = "MyBatis Log Plugin Free";
+    public static final String TOOL_WINDOW_ID = "MybatisLogFree";
 
     @Override
     public @NotNull String getToolWindowId() {
@@ -39,7 +39,7 @@ class MyBatisLogExecutor extends Executor {
 
     @Override
     public String getDescription() {
-        return "MyBatis Log";
+        return "MybatisLogFree";
     }
 
     @NotNull

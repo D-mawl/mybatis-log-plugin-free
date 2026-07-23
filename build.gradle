@@ -1,30 +1,31 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '0.6.5'
+    id 'org.jetbrains.intellij' version '1.17.4'
 }
 
-group 'com.starxg'
-version '1.3.0'
+group 'com.mawl.mybatislog'
+version '2.0.1'
 
-sourceCompatibility = 1.8
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
 
 repositories {
-    maven { url 'https://maven.aliyun.com/repository/central/'}
+    maven { url 'https://maven.aliyun.com/repository/central/' }
     maven { url 'https://maven.aliyun.com/repository/public/' }
     maven { url 'https://maven.aliyun.com/repository/google/' }
-    maven { url 'https://maven.aliyun.com/repository/jcenter/'}
-    maven { url 'https://maven.aliyun.com/repository/gradle-plugin'}
-    //    mavenCentral()
+    maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+    mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
 }
 
 intellij {
-    version '2018.3.6'
-//    version '2020.2'
-//    version '2021.2'
+    version = '2024.1'
+    plugins = []
 }
 
 tasks.withType(JavaCompile) {
@@ -32,27 +33,17 @@ tasks.withType(JavaCompile) {
 }
 
 patchPluginXml {
-    sinceBuild = '183'
-//    sinceBuild = '145.2070'
+    sinceBuild = '241'
     untilBuild = ''
-    changeNotes """
+    changeNotes = """
 <dl>
-    <dt><b>${project.getVersion()}</b></dt>
-    <dd>support custom colors <a href="https://github.com/starxg/mybatis-log-plugin-free/issues/6">#6</a></dd>
-    <dd>fix <a href="https://github.com/starxg/mybatis-log-plugin-free/issues/5">#5</a></dd>
-</dl>
-<dl>
-    <dt>1.2.0</dt>
-    <dd>support jump</dd>
-    <dd>bug fixes and improvements</dd>
-</dl>
-<dl>
-    <dt>1.1.0</dt>
-    <dd>support disable formatting</dd>
-</dl>
-<dl>
-    <dt>1.0.0</dt>
-    <dd>Restore mybatis sql log</dd>
+    <dt><b>${project.version}</b></dt>
+    <dd>Compatible with the latest IntelliJ IDEA versions</dd>
+    <dd>Restore mybatis sql log to original whole executable sql</dd>
 </dl>
       """
+}
+
+runIde {
+    autoReloadPlugins = true
 }

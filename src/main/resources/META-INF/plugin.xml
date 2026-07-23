@@ -1,34 +1,31 @@
 <idea-plugin>
-	<id>com.starxg.mybatis-log-plugin-free</id>
-	<name>MyBatis Log Free</name>
+	<id>com.mawl.mybatislog</id>
+	<name>MybatisLogFree</name>
 
-	<vendor email="591269@gmail.com" url="http://github.com/starxg">starxg</vendor>
+	<vendor email="" url="https://github.com/mawl">mawl</vendor>
 
 	<description><![CDATA[
 	Restore mybatis sql log to original whole executable sql.
 	<br/>
-	<img width="350" height="210" src="https://blog.starxg.com/img/2021/10/1-2-2.png"  alt=""/>
-	<br/>
 	<b>usage:</>
 	<ol>
-		<li>Click Tool -> MyBatis Log Free</li>
-		<li>Click MyBatis Log Free in the console</li>
+		<li>Click Tool -> MybatisLogFree</li>
+		<li>Click MybatisLogFree in the console</li>
 	</ol>
-    <a href="http://github.com/starxg/mybatis-log-plugin-free">github</a> | <a href="https://github.com/starxg/mybatis-log-plugin-free/issues">issues</a> | <a href="http://ko-fi.com/huangxingguang">donate</a>
     ]]></description>
 
 	<depends>com.intellij.modules.platform</depends>
 
 	<extensions defaultExtensionNs="com.intellij">
 		<!-- Add your extensions here -->
-		<consoleFilterProvider implementation="com.starxg.mybatislog.MyBatisLogConsoleFilterProvider"/>
-		<executor implementation="com.starxg.mybatislog.gui.MyBatisLogExecutor"
+		<consoleFilterProvider implementation="com.mawl.mybatislog.MyBatisLogConsoleFilterProvider"/>
+		<executor implementation="com.mawl.mybatislog.gui.MyBatisLogExecutor"
 				  id="MyBatisLogFreeExecutor"/>
 	</extensions>
 
 	<actions>
-		<action id="com.starxg.mybatislog.action.MyBatisLogAction" class="com.starxg.mybatislog.action.MyBatisLogAction"
-				text="MyBatis Log Plugin" description="MyBatis log plugin free" icon="/icons/ibatis.svg">
+		<action id="com.mawl.mybatislog.action.MyBatisLogAction" class="com.mawl.mybatislog.action.MyBatisLogAction"
+				text="MybatisLogFree" description="MybatisLogFree" icon="/icons/ibatis.svg">
 			<add-to-group group-id="ToolsMenu" anchor="last"/>
 			<add-to-group group-id="ConsoleEditorPopupMenu" anchor="before" relative-to-action="ConsoleView.ClearAll"/>
 		</action>
