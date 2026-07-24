@@ -80,31 +80,33 @@ public class DonateDialogWrapper extends DialogWrapper {
             c.gridx = 1;
             panel.add(wechatpay, c);
 
-            c = new GridBagConstraints();
-            c.insets = JBUI.insets(10);
-            c.gridy = 2;
-            c.gridx = 0;
-            final HyperlinkLabel kofi = new HyperlinkLabel();
-            kofi.setIcon(Icons.DONATE);
-            kofi.setHyperlinkText("Donate on Ko-fi");
-            kofi.setUseIconAsLink(true);
-            kofi.setHyperlinkTarget("https://ko-fi.com/huangxingguang");
-            panel.add(kofi, c);
-
-            c = new GridBagConstraints();
-            c.insets = JBUI.insets(10);
-            c.gridy = 2;
-            c.gridx = 1;
-            final HyperlinkLabel paypal = new HyperlinkLabel();
-            paypal.setIcon(Icons.DONATE);
-            paypal.setHyperlinkText("Donate on PayPal");
-            paypal.setUseIconAsLink(true);
-            paypal.setHyperlinkTarget("https://paypal.me/huangxingguang");
-
-            panel.add(paypal, c);
+//            c = new GridBagConstraints();
+//            c.insets = JBUI.insets(10);
+//            c.gridy = 2;
+//            c.gridx = 0;
+//            final HyperlinkLabel kofi = new HyperlinkLabel();
+//            kofi.setIcon(Icons.DONATE);
+//            kofi.setHyperlinkText("Donate on Ko-fi");
+//            kofi.setUseIconAsLink(true);
+//            kofi.setHyperlinkTarget("https://ko-fi.com/huangxingguang");
+//            panel.add(kofi, c);
+//
+//            c = new GridBagConstraints();
+//            c.insets = JBUI.insets(10);
+//            c.gridy = 2;
+//            c.gridx = 1;
+//            final HyperlinkLabel paypal = new HyperlinkLabel();
+//            paypal.setIcon(Icons.DONATE);
+//            paypal.setHyperlinkText("Donate on PayPal");
+//            paypal.setUseIconAsLink(true);
+//            paypal.setHyperlinkTarget("https://paypal.me/huangxingguang");
+//
+//            panel.add(paypal, c);
 
         } catch (IOException e) {
             Logger.getInstance(getClass()).error(e.getMessage(), e);
+        } catch (Throwable t) {
+            Logger.getInstance(getClass()).error(t.getMessage(), t);
         }
 
         return panel;
