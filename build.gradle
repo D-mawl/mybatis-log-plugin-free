@@ -36,13 +36,6 @@ tasks.withType(JavaCompile) {
 patchPluginXml {
     sinceBuild = '241'
     untilBuild = ''
-    changeNotes = """
-<dl>
-    <dt><b>${project.version}</b></dt>
-    <dd>Compatible with the latest IntelliJ IDEA versions</dd>
-    <dd>Restore mybatis sql log to original whole executable sql</dd>
-</dl>
-      """
 }
 
 runIde {

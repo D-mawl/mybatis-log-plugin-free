@@ -4,6 +4,14 @@
 
 	<vendor email="" url="https://github.com/mawl">mawl</vendor>
 
+	<version>2.0.2</version>
+
+	<change-notes><![CDATA[
+	<ul>
+		<li><b>2.0.2</b> - 显式引入 commons-lang3,兼容最新版本的 IntelliJ IDEA</li>
+	</ul>
+    ]]></change-notes>
+
 	<description><![CDATA[
 	Restore mybatis sql log to original whole executable sql.
 	<br/>
