@@ -56,7 +56,7 @@
 
 ## 构建
 
-需要 JDK 17+。
+需要 JDK 21+。
 
 ```bash
 # 打包插件（产物：build/distributions/MybatisLogFree-<version>.zip）

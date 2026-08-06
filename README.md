@@ -56,7 +56,7 @@ Click the **settings** button in the tool window toolbar to configure:
 
 ## Build
 
-Requires JDK 17+.
+Requires JDK 21+.
 
 ```bash
 # Build the plugin (output: build/distributions/MybatisLogFree-<version>.zip)

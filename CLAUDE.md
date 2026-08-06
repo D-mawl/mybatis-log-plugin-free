@@ -6,9 +6,9 @@
 
 MybatisLogFree 是一个 IntelliJ IDEA 插件,把 MyBatis 打印在运行控制台的 SQL 日志(`Preparing:` / `Parameters:`)还原成完整、可直接执行的 SQL,并在独立的、带颜色区分的 **SQL** 工具窗口中展示。
 
-- 语言:Java 17
-- 构建:Gradle + `org.jetbrains.intellij` 插件(1.17.4)
-- 目标平台:IntelliJ IDEA 2024.1+(`sinceBuild = 241`)
+- 语言:Java 21
+- 构建:Gradle + `org.jetbrains.intellij.platform` 插件(2.7.1)
+- 目标平台:IntelliJ IDEA 2025.1+(`sinceBuild = 251`)
 
 ## 常用命令
 
@@ -29,7 +29,7 @@ MybatisLogFree 是一个 IntelliJ IDEA 插件,把 MyBatis 打印在运行控制�
 ./gradlew test --tests "com.mawl.mybatislog.MyBatisLogConsoleFilterTest"
 ```
 
-> 需要 JDK 17+。
+> 需要 JDK 21+。
 
 ## 工作原理
 
@@ -65,7 +65,7 @@ MybatisLogFree 是一个 IntelliJ IDEA 插件,把 MyBatis 打印在运行控制�
 - 目的:方便插件市场(JetBrains Marketplace)展示每个版本更新了哪些内容。
 - 版本号需与 `build.gradle` 中的 `version` 保持一致。
 - 更新内容可参考 `CHANGELOG.md`,保持两处内容一致。
-- `build.gradle` 的 `patchPluginXml` 已移除 `changeNotes` 配置,不再覆盖 `plugin.xml` 手写的更新说明;`<version>` 仍会由 `patchPluginXml` 用 `project.version` 覆盖,故须与 `build.gradle` 一致。
+- `build.gradle` 的 `intellijPlatform.pluginConfiguration` 未设置 `changeNotes`,构建时不会覆盖 `plugin.xml` 手写的 `<change-notes>`;`<version>` 默认由 `pluginConfiguration.version`(取自 `project.version`)覆盖,故须与 `build.gradle` 一致。
 
 ### 版本升级清单(以 `2.0.2` → 新版本 `X.Y.Z` 为例)
 
@@ -79,9 +79,9 @@ MybatisLogFree 是一个 IntelliJ IDEA 插件,把 MyBatis 打印在运行控制�
 | `CHANGELOG.md` | 顶部 | 新增 `## X.Y.Z` 段落及更新条目 |
 
 说明:
-- `build.gradle` 的 `version` 是权威来源,`patchPluginXml` 构建时会用它覆盖产物中的 `<version>`;`plugin.xml` 手写的 `<version>` 需与之保持一致。
+- `build.gradle` 的 `version` 是权威来源,构建时会用它覆盖产物中的 `<version>`;`plugin.xml` 手写的 `<version>` 需与之保持一致。
 - `plugin.xml` 的 `<change-notes>` 与 `CHANGELOG.md` 的更新内容应保持一致。
-- `build.gradle` 中的 `sinceBuild` / `untilBuild` 仅在支持的 IDE 版本范围变化时才需修改,常规版本升级无需改动。
+- `build.gradle` 中 `intellijPlatform.pluginConfiguration.ideaVersion` 的 `sinceBuild` / `untilBuild` 仅在支持的 IDE 版本范围变化时才需修改,常规版本升级无需改动。
 
 ## 编码规范
 
