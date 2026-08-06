@@ -1,5 +1,9 @@
 # 更新日志
 
+## 2.0.4
+
+- 清理 IntelliJ Platform 弃用 API(RunContentManager、PluginManagerCore、ToolWindowManagerListener 新签名等)
+
 ## 2.0.3
 
 - 升级到 Java 21,最低支持 IntelliJ IDEA 2025.1

@@ -8,7 +8,6 @@ import com.intellij.openapi.editor.ScrollType;
 import com.intellij.openapi.editor.ex.MarkupIterator;
 import com.intellij.openapi.editor.ex.MarkupModelEx;
 import com.intellij.openapi.editor.ex.RangeHighlighterEx;
-import com.intellij.openapi.wm.IdeFocusManager;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -50,7 +49,7 @@ public abstract class JumpSqlAction extends AnAction {
                 if (isValid(next, startOffset, endOffset)) {
                     editor.getCaretModel().getPrimaryCaret().moveToOffset(movedOffset = next.getStartOffset());
                     editor.getScrollingModel().scrollToCaret(ScrollType.MAKE_VISIBLE);
-                    IdeFocusManager.getGlobalInstance().doWhenFocusSettlesDown(() -> IdeFocusManager.getGlobalInstance().requestFocus(editor.getContentComponent(), true));
+                    editor.getContentComponent().requestFocus();
                     if (canBreak) {
                         break;
                     }

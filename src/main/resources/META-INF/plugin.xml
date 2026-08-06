@@ -4,10 +4,11 @@
 
 	<vendor email="" url="https://github.com/mawl">mawl</vendor>
 
-	<version>2.0.3</version>
+	<version>2.0.4</version>
 
 	<change-notes><![CDATA[
 	<ul>
+		<li><b>2.0.4</b> - 清理 IntelliJ Platform 弃用 API(RunContentManager、PluginManagerCore、ToolWindowManagerListener 新签名等)</li>
 		<li><b>2.0.3</b> - 升级到 Java 21,最低支持 IntelliJ IDEA 2025.1;构建工具迁移到 IntelliJ Platform Gradle Plugin 2.x</li>
 		<li><b>2.0.2</b> - 显式引入 commons-lang3,兼容最新版本的 IntelliJ IDEA</li>
 	</ul>

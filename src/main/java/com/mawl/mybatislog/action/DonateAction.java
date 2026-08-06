@@ -1,7 +1,7 @@
 package com.mawl.mybatislog.action;
 
 import com.intellij.ide.plugins.IdeaPluginDescriptor;
-import com.intellij.ide.plugins.PluginManager;
+import com.intellij.ide.plugins.PluginManagerCore;
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -49,7 +49,7 @@ public class DonateAction extends AnAction {
     }
 
     private String getDonateKey() {
-        final IdeaPluginDescriptor plugin = PluginManager.getPlugin(PluginId.getId("com.mawl.mybatislog"));
+        final IdeaPluginDescriptor plugin = PluginManagerCore.getPlugin(PluginId.getId("com.mawl.mybatislog"));
         if (Objects.isNull(plugin)) {
             return DonateAction.class.getName();
         }

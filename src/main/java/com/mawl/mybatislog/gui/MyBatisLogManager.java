@@ -1,7 +1,6 @@
 package com.mawl.mybatislog.gui;
 
 import com.intellij.execution.DefaultExecutionResult;
-import com.intellij.execution.ExecutionManager;
 import com.intellij.execution.Executor;
 import com.intellij.execution.configurations.RunProfile;
 import com.intellij.execution.configurations.RunProfileState;
@@ -12,6 +11,7 @@ import com.intellij.execution.runners.ExecutionEnvironment;
 import com.intellij.execution.ui.ConsoleView;
 import com.intellij.execution.ui.ConsoleViewContentType;
 import com.intellij.execution.ui.RunContentDescriptor;
+import com.intellij.execution.ui.RunContentManager;
 import com.intellij.execution.ui.RunnerLayoutUi;
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.Disposable;
@@ -113,14 +113,14 @@ public class MyBatisLogManager implements Disposable {
 
         messageBusConnection.subscribe(ToolWindowManagerListener.TOPIC, new ToolWindowManagerListener() {
             @Override
-            public void stateChanged() {
+            public void stateChanged(@NotNull ToolWindowManager toolWindowManager) {
                 if (!getToolWindow().isAvailable()) {
                     Disposer.dispose(MyBatisLogManager.this);
                 }
             }
         });
 
-        ExecutionManager.getInstance(project).getContentManager().showRunContent(MyBatisLogExecutor.getInstance(),
+        RunContentManager.getInstance(project).showRunContent(MyBatisLogExecutor.getInstance(),
                 descriptor);
 
         getToolWindow().activate(null);
@@ -259,7 +259,7 @@ public class MyBatisLogManager implements Disposable {
 
         MyBatisLogManager manager = getInstance(project);
 
-        if (Objects.nonNull(manager) && !Disposer.isDisposed(manager)) {
+        if (Objects.nonNull(manager)) {
             Disposer.dispose(manager);
         }
 
@@ -329,7 +329,7 @@ public class MyBatisLogManager implements Disposable {
 
         stop();
 
-        ExecutionManager.getInstance(project).getContentManager().removeRunContent(MyBatisLogExecutor.getInstance(),
+        RunContentManager.getInstance(project).removeRunContent(MyBatisLogExecutor.getInstance(),
                 descriptor);
 
     }
