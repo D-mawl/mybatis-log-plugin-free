@@ -133,7 +133,7 @@ public class MyBatisLogManager implements Disposable {
         console.getComponent();
 
         final Editor editor = console.getEditor();
-        editor.getDocument().addDocumentListener(new RangeHighlighterDocumentListener(editor));
+        editor.getDocument().addDocumentListener(new RangeHighlighterDocumentListener(editor), console);
 
         return console;
     }

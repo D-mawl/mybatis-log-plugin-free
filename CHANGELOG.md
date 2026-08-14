@@ -1,5 +1,10 @@
 # 更新日志
 
+## 2.0.5
+
+- 修复过期 API:改用 `PluginAwareClassLoader` 读取插件版本号
+- `Document.addDocumentListener` 迁移到带 `Disposable` 的重载
+
 ## 2.0.4
 
 - 清理 IntelliJ Platform 弃用 API(RunContentManager、PluginManagerCore、ToolWindowManagerListener 新签名等)

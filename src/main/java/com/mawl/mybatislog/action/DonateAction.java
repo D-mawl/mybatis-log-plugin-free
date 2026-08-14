@@ -1,11 +1,9 @@
 package com.mawl.mybatislog.action;
 
-import com.intellij.ide.plugins.IdeaPluginDescriptor;
-import com.intellij.ide.plugins.PluginManagerCore;
+import com.intellij.ide.plugins.cl.PluginAwareClassLoader;
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
-import com.intellij.openapi.extensions.PluginId;
 import com.mawl.mybatislog.Icons;
 import com.mawl.mybatislog.gui.DonateDialogWrapper;
 import org.jetbrains.annotations.NotNull;
@@ -49,10 +47,10 @@ public class DonateAction extends AnAction {
     }
 
     private String getDonateKey() {
-        final IdeaPluginDescriptor plugin = PluginManagerCore.getPlugin(PluginId.getId("com.mawl.mybatislog"));
-        if (Objects.isNull(plugin)) {
-            return DonateAction.class.getName();
+        final ClassLoader classLoader = DonateAction.class.getClassLoader();
+        if (classLoader instanceof PluginAwareClassLoader pluginAwareClassLoader) {
+            return DonateAction.class.getName() + "@" + pluginAwareClassLoader.getPluginDescriptor().getVersion();
         }
-        return DonateAction.class.getName() + "@" + plugin.getVersion();
+        return DonateAction.class.getName();
     }
 }
