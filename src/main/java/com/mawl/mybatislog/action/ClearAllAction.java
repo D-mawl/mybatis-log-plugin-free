@@ -1,6 +1,5 @@
 package com.mawl.mybatislog.action;
 
-import com.intellij.execution.ExecutionBundle;
 import com.intellij.execution.impl.ConsoleViewImpl;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -9,6 +8,8 @@ import com.intellij.openapi.actionSystem.LangDataKeys;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.DumbAwareAction;
 import org.jetbrains.annotations.NotNull;
+
+import static com.mawl.mybatislog.MyBatisLogBundle.message;
 
 /**
  * ClearAllAction
@@ -19,7 +20,7 @@ public class ClearAllAction extends DumbAwareAction {
     private final ConsoleViewImpl consoleView;
 
     public ClearAllAction(ConsoleViewImpl consoleView) {
-        super(ExecutionBundle.message("clear.all.from.console.action.name"), "Clear All", AllIcons.Actions.GC);
+        super(message("action.clear.all.text"), message("action.clear.all.description"), AllIcons.Actions.GC);
         this.consoleView = consoleView;
     }
 
